@@ -9,36 +9,34 @@ from numpy import zeros
 
 
 # taking datatype from the user
-def get_datatype():
-    print('Please choose a datatype : \n 1. Integer \n 2. Float \n 3. Boolean \n You choose : ')
-    ip = int(input())
-    datatype = ''
-    if ip == 1:
-        datatype = 'int'
-    elif ip == 2:
-        datatype = 'float'
-    elif ip == 3:
-        datatype = 'bool'
+def get_datatype(ch_):
+    if ch_ == 1:
+        return int
+    elif ch_ == 2:
+        return float
+    elif ch_ == 3:
+        return bool
     else:
         print('You chosen wrong input!')
         exit()
-    return datatype
 
 
 if __name__ == '__main__':
     try:
         row = int(input('Enter Row number : '))
         col = int(input('Enter Column number : '))
-        arr = zeros((row, col), get_datatype())
+        ch = int(input('Please choose a datatype : \n 1. Integer \n 2. Float \n 3. Boolean \n You choose : '))
+        d_type = get_datatype(ch)
+        arr = zeros((row, col), d_type)
         # Taking inputs from user
         for i in range(row):
             for j in range(col):
                 print('Enter value for (', i, ',', j, ') position : ', end='')
-                arr[i][j] = input()
+                arr[i][j] = eval(input())
         # Print the array
-        print('Your 2D array is : ', arr)
-        for i in range(0, row):
-            for j in range(0, col):
+        print('Your 2D array is : ')
+        for i in range(row):
+            for j in range(col):
                 print(arr[i][j], ' ', end='')
             print()
     except Exception as e:
