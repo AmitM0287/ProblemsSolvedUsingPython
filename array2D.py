@@ -36,9 +36,9 @@ if __name__ == '__main__':
                 print('Enter value for (', i, ',', j, ') position : ', end='')
                 arr[i][j] = input()
         # Print the array
-        print('Your 2D array is : ')
-        for i in range(row):
-            for j in range(col):
+        print('Your 2D array is : ', arr)
+        for i in range(0, row):
+            for j in range(0, col):
                 print(arr[i][j], ' ', end='')
             print()
     except Exception as e:
