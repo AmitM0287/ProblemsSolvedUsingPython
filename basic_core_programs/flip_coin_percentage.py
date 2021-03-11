@@ -10,7 +10,7 @@ from random import random
 def flip_coin(num):
     c_tail = 0
     # Calculate tail count
-    for i in range(num):
+    for _ in range(num):
         ran = random()
         if ran < 0.5:
             c_tail += 1
