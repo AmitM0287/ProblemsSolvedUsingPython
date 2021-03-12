@@ -5,15 +5,26 @@
 #    c. Logic -> repeat until i equals N.
 
 from sys import argv
+import logging
+
+# implementing logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.ERROR)
+formatter = logging.Formatter('%(asctime)s : %(name)s : ', datefmt='%m/%d/%Y %I:%M:%S %p')
+file_handler = logging.FileHandler('exceptions.log')
+file_handler.setLevel(logging.ERROR)
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
 
 
-# Calculating power of 2 until i == N
-def power_of(n):
-    k = 0
+def power_of(num):
+    """power_of(num): This function calculate the power of 2 of a number. It's adds all the values
+       in a list. It returns a list."""
+    _ = 0
     ls = []
-    while k != n:
-        ls.append(2**k)
-        k += 1
+    while _ != num:
+        ls.append(2**_)
+        _ += 1
     return ls
 
 
@@ -28,4 +39,4 @@ if __name__ == '__main__':
         else:
             print('Please enter a integer(N) between 0 <= N <31 this range!')
     except Exception as e:
-        print(e)
+        logger.exception(e)
