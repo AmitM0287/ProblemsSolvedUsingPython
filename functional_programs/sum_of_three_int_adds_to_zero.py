@@ -6,10 +6,21 @@
 #    d. O/P -> One Output is number of distinct triplets as well as the second output is to print the distinct triplets.
 
 from numpy import zeros
+import logging
+
+# Implementing logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.ERROR)
+formatter = logging.Formatter('%(asctime)s : %(name)s : ', datefmt='%m/%d/%Y %I:%M:%S %p')
+file_handler = logging.FileHandler('exceptions.log')
+file_handler.setLevel(logging.ERROR)
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
 
 
-# calculating triplets of sum zero
 def find_triplets(arr_, len_):
+    """find_triplets(arr_, len_): This function helps you to calculate the triplets of sum zero.
+       It returns a list of triplets of sum equals to zero."""
     ls = []
     found = False
     for i in range(0, len_-2):
@@ -25,24 +36,26 @@ def find_triplets(arr_, len_):
         return ls
 
 
-# separate all the triplets of sum zero from list
 def separate(triplet_):
-    t = 3
-    while t < len(triplet_):
-        triplet_.insert(t, ';')
-        t += 4
+    """separate(triplet_): This function adds a separator(';') in the list of triplets of sum zero.
+       It returns a list of triplets of sum zero with a separator(;)."""
+    _ = 3
+    while _ < len(triplet_):
+        triplet_.insert(_, ';')
+        _ += 4
     return triplet_
 
 
 if __name__ == '__main__':
     try:
+        # taking the length of array from user
         len_arr = int(input('Enter how many elements you want to enter to get a triplet of sum zero : '))
-        # Define array
+        # define array
         arr = zeros(len_arr, int)
-        # Taking user inputs from user
-        for d in range(len_arr):
-            print('Enter ', (d+1), ' element : ', end='')
-            arr[d] = int(input())
+        # taking user inputs from user
+        for index in range(len_arr):
+            print('Enter ', (index+1), ' element : ', end='')
+            arr[index] = int(input())
         # check triplets of sum equals to zero
         triplet = find_triplets(arr, len_arr)
         len_triplet = len(triplet)
@@ -54,4 +67,4 @@ if __name__ == '__main__':
         for item in triplets:
             print(item, ' ', end='')
     except Exception as e:
-        print(e)
+        logger.exception(e)

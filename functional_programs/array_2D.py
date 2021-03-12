@@ -6,15 +6,28 @@
 #    d. O/P -> Print function to print 2 Dimensional Array.
 
 from numpy import zeros
+import logging
+
+# Implementing logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.ERROR)
+formatter = logging.Formatter('%(asctime)s : %(name)s : ', datefmt='%m/%d/%Y %I:%M:%S %p')
+file_handler = logging.FileHandler('exceptions.log')
+file_handler.setLevel(logging.ERROR)
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
 
 
-# taking datatype from the user
-def get_datatype(ch_):
-    if ch_ == 1:
+def get_datatype():
+    """get_datatype(choice): This function helps user to choose one data types from below-
+       1. Integer  2. Float  3. Boolean
+       It returns that data type which is chosen by user."""
+    choice = int(input('Please choose a datatype : \n 1. Integer \n 2. Float \n 3. Boolean \n You choose : '))
+    if choice == 1:
         return int
-    elif ch_ == 2:
+    elif choice == 2:
         return float
-    elif ch_ == 3:
+    elif choice == 3:
         return bool
     else:
         print('You chosen wrong input!')
@@ -25,8 +38,7 @@ if __name__ == '__main__':
     try:
         row = int(input('Enter Row number : '))
         col = int(input('Enter Column number : '))
-        ch = int(input('Please choose a datatype : \n 1. Integer \n 2. Float \n 3. Boolean \n You choose : '))
-        d_type = get_datatype(ch)
+        d_type = get_datatype()
         arr = zeros((row, col), d_type)
         # Taking inputs from user
         for i in range(row):
@@ -40,4 +52,4 @@ if __name__ == '__main__':
                 print(arr[i][j], ' ', end='')
             print()
     except Exception as e:
-        print(e)
+        logger.exception(e)

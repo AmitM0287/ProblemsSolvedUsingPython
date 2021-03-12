@@ -6,10 +6,25 @@
 #    Root 2 of x = (-b - sqrt(delta))/(2*a)
 
 from numpy import sqrt
+import logging
+
+# Implementing logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.ERROR)
+formatter = logging.Formatter('%(asctime)s : %(name)s : ', datefmt='%m/%d/%Y %I:%M:%S %p')
+file_handler = logging.FileHandler('exceptions.log')
+file_handler.setLevel(logging.ERROR)
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
 
 
-# calculating roots
 def calc_root(delta_, a_, b_):
+    """calc_root(delta_, a_, b_): This function calculate the roots of a quadratic equation a*x*x + b*x + c.
+       Since the equation is x*x, hence there are 2 roots. The 2 roots of the equation can be found using a
+       the formula (Note: Take a_, b_ and c_ as input values)
+       delta_ = b*b - 4*a_*c_
+       Root 1 of x = (-b_ + sqrt(delta_))/(2*a_)
+       Root 2 of x = (-b_ - sqrt(delta_))/(2*a_)"""
     sqrt_delta = round(sqrt(delta_), 4)
     r1 = (-b_ + sqrt_delta) / (2 * a_)
     r2 = (-b_ - sqrt_delta) / (2 * a_)
@@ -31,4 +46,4 @@ if __name__ == '__main__':
         print('Root 1 of x is : ', root1)
         print('Root 2 of x is : ', root2)
     except Exception as e:
-        print(e)
+        logger.exception(e)
