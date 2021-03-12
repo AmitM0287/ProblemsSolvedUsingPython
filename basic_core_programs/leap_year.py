@@ -3,8 +3,21 @@
 #    b. Logic -> Determine if it is a Leap Year.
 #    c. O/P -> Print the year is a Leap Year or not.
 
-# Check weather a year is leap year or not
+import logging
+
+# implementing logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.ERROR)
+formatter = logging.Formatter('%(asctime)s : %(name)s : ', datefmt='%m/%d/%Y %I:%M:%S %p')
+file_handler = logging.FileHandler('exceptions.log')
+file_handler.setLevel(logging.ERROR)
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
+
 def is_leap_year(year_):
+    """is_leap_year(year_): This function check weather a year is leap year or not.
+       If that year is a leap year then it returns True otherwise it returns False."""
     if year_ % 4 == 0:
         if year_ % 100 == 0:
             if year_ % 400 == 0:
@@ -29,4 +42,4 @@ if __name__ == '__main__':
         else:
             print('Please enter a valid year!')
     except Exception as e:
-        print(e)
+        logger.exception(e)

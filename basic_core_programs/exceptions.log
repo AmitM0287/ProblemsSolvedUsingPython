@@ -1,0 +1,25 @@
+03/12/2021 07:17:14 AM : __main__ : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\basic_core_programs\flip_coin_percentage.py", line 48, in <module>
+    n = int(input('Enter how many times you want to flip the coin : '))
+ValueError: invalid literal for int() with base 10: 'hskjhvkj'
+03/12/2021 07:29:15 AM : __main__ : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\basic_core_programs\harmonic_number.py", line 31, in <module>
+    N = int(input("Enter a integer to get it's Harmonic Value : "))
+ValueError: invalid literal for int() with base 10: 'hjvjdfv'
+03/12/2021 07:36:00 AM : __main__ : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\basic_core_programs\leap_year.py", line 38, in <module>
+    5/0
+ZeroDivisionError: division by zero
+03/12/2021 07:41:11 AM : __main__ : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\basic_core_programs\power_of_2.py", line 33, in <module>
+    N = int(argv[1])
+ValueError: invalid literal for int() with base 10: 'bhjbd'
+03/12/2021 08:22:S AM : __main__ : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\basic_core_programs\prime_factors.py", line 41, in <module>
+    num = int(input("Enter a number to get it's prime factors : "))
+ValueError: invalid literal for int() with base 10: 'mhbk'
