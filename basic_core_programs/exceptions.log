@@ -23,8 +23,3 @@ Traceback (most recent call last):
   File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\basic_core_programs\prime_factors.py", line 41, in <module>
     num = int(input("Enter a number to get it's prime factors : "))
 ValueError: invalid literal for int() with base 10: 'mhbk'
-03/12/2021 08:36:S AM : __main__ : 
-Traceback (most recent call last):
-  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\basic_core_programs\replace_string_by_user_input.py", line 45, in <module>
-    5/0
-ZeroDivisionError: division by zero
