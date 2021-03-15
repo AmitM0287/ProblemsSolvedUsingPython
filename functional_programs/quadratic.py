@@ -1,33 +1,30 @@
-# 4. Write a program to find the roots of the equation a*x*x + b*x + c.
-#    Since the equation is x*x, hence there are 2 roots.
-#    The 2 roots of the equation can be found using a formula (Note: Take a, b and c as input values)
-#    delta = b*b - 4*a*c
-#    Root 1 of x = (-b + sqrt(delta))/(2*a)
-#    Root 2 of x = (-b - sqrt(delta))/(2*a)
-
+"""
+4. Write a program to find the roots of the equation a*x*x + b*x + c.
+    Since the equation is x*x, hence there are 2 roots. The 2 roots of the equation can be found
+    using a formula (Note: Take a, b and c as input values)
+    delta = b*b - 4*a*c
+    Root 1 of x = (-b + sqrt(delta))/(2*a)
+    Root 2 of x = (-b - sqrt(delta))/(2*a)
+"""
 from numpy import sqrt
-import logging
+from logging_configuration import logging_config
 
-# Implementing logging
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.ERROR)
-formatter = logging.Formatter('%(asctime)s : %(name)s : ', datefmt='%m/%d/%Y %I:%M:%S %p')
-file_handler = logging.FileHandler('exceptions.log')
-file_handler.setLevel(logging.ERROR)
-file_handler.setFormatter(formatter)
-logger.addHandler(file_handler)
+logger = logging_config.get_logger()
 
 
-def calc_root(delta_, a_, b_):
-    """calc_root(delta_, a_, b_): This function calculate the roots of a quadratic equation a*x*x + b*x + c.
-       Since the equation is x*x, hence there are 2 roots. The 2 roots of the equation can be found using a
-       the formula (Note: Take a_, b_ and c_ as input values)
-       delta_ = b*b - 4*a_*c_
-       Root 1 of x = (-b_ + sqrt(delta_))/(2*a_)
-       Root 2 of x = (-b_ - sqrt(delta_))/(2*a_)"""
-    sqrt_delta = round(sqrt(delta_), 4)
-    r1 = (-b_ + sqrt_delta) / (2 * a_)
-    r2 = (-b_ - sqrt_delta) / (2 * a_)
+def calc_root(delta_value, variable_a, variable_b):
+    """
+    This function calculate the roots of a quadratic equation a*x*x + b*x + c.
+       Root 1 of x = (-b + sqrt(delta))/(2*a)
+       Root 2 of x = (-b - sqrt(delta))/(2*a)
+    :param delta_value: It's accept delta_value as a argument.
+    :param variable_a: It's accept variable_a as a argument.
+    :param variable_b: It's accept variable_b as another argument.
+    :return: It's return the roots of the quadratic equation.
+    """
+    sqrt_delta = round(sqrt(delta_value), 4)
+    r1 = (-variable_b + sqrt_delta) / (2 * variable_a)
+    r2 = (-variable_b - sqrt_delta) / (2 * variable_a)
     return round(r1, 4), round(r2, 4)
 
 
@@ -45,5 +42,12 @@ if __name__ == '__main__':
         # print the roots value
         print('Root 1 of x is : ', root1)
         print('Root 2 of x is : ', root2)
+    except ValueError as e:
+        print('Enter integer numbers only! Please try again...')
+        logger.exception(e)
+    except IndexError as e:
+        print('Enter value as command line arguments only! Please try again...')
+        logger.exception(e)
     except Exception as e:
+        print('Oops! Something went wrong! Please try again...')
         logger.exception(e)
