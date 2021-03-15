@@ -8,8 +8,4 @@ Traceback (most recent call last):
   File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\functional_programs\sum_of_three_int_adds_to_zero.py", line 52, in <module>
     len_arr = int(input('Enter how many elements you want to enter to get a triplet of sum zero : '))
 ValueError: invalid literal for int() with base 10: 'hjvsfk'
-03/12/2021 10:40:41 AM : __main__ : 
-Traceback (most recent call last):
-  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\functional_programs\wind_chill.py", line 35, in <module>
-    t, v = float(argv[1]), float(argv[2])
-ValueError: could not convert string to float: 'hbkds'
+
