@@ -13,8 +13,9 @@ logger = logging_config.get_logger()
 
 def prime_factors_of(number_):
     """
-    prime_factors_of(number_): This function calculate the prime factors of a number.
-    It's add all the prime factors in a list. It returns the list of prime factors.
+    This function calculate the prime factors of a number. It's add all the prime factors in a list.
+    :param number_: It's accept a number_ as a parameter.
+    :return: It's return the list of prime factors.
     """
     list_of_prime_factors = []
     # add the number of two's that divide number_ in the list
@@ -42,8 +43,9 @@ if __name__ == '__main__':
                 print(prime_factor, ' ', end='')
         else:
             print('Enter positive integer only! Please try again...')
-    except ValueError:
+    except ValueError as e:
         print('Enter integers only! Please try again...')
+        logger.exception(e)
     except Exception as e:
         print('Oops! Something went wrong! Please try again...')
         logger.exception(e)

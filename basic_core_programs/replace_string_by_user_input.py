@@ -11,8 +11,9 @@ logger = logging_config.get_logger()
 
 def is_valid(user_name):
     """
-    is_valid(user_name): This function check weather the username is valid or not.
-    If it has the minimum length 3 then it's valid & return True otherwise return False.
+    This function check weather the username is valid or not. If it has the minimum length 3 then it's valid.
+    :param user_name: It's take user_name as a parameter.
+    :return:  It's return True if user_name is valid, otherwise return False.
     """
     if len(user_name) >= 3:
         return True
@@ -22,8 +23,10 @@ def is_valid(user_name):
 
 def replace_by(string_, username_):
     """
-    replace_by(string_, username_): This function replace the existing sting with the username.
-    It returns the updated sting by replacing the username.
+    This function replace the existing sting_ with the username_.
+    :param string_: It's accept a string_ as a parameter.
+    :param username_: It's accept username_ as another parameter.
+    :return: It's return the updated sting_ by replacing the username_.
     """
     # convert string to list
     list_ = list(string_.split(' '))

@@ -12,8 +12,9 @@ logger = logging_config.get_logger()
 
 def flip_coin(number_of_times_):
     """
-    flip_coin(number_of_times_): This function count heads and tails after flip the coin number of times.
-    It returns head count and tail count.
+    This function count heads and tails after flip the coin number of times.
+    :param number_of_times_: It's accept a parameter number_of_times_ to flip the coin.
+    :return: It's returns head_count & tail_count.
     """
     tail_count = 0
     # counting tails
@@ -28,8 +29,10 @@ def flip_coin(number_of_times_):
 
 def calculate_percentage(head_count_, tail_count_):
     """
-    calculate_percentage(head_count_, tail_count_): This function calculate Head and Tail percentage.
-    It returns head percentage and tail percentage.
+    This function calculate Head and Tail percentage.
+    :param head_count_: It's accept head_count as a parameter.
+    :param tail_count_: It's accept tail_count as another parameter.
+    :return: It's returns head_percentage & tail_percentage.
     """
     total_count = head_count_ + tail_count_
     # calculate head percentage
@@ -49,8 +52,9 @@ if __name__ == '__main__':
             print('Tail Percentage is : ', percentage_of_tail, '%')
         else:
             print('Enter positive integers only! Please try again...')
-    except ValueError:
+    except ValueError as e:
         print('Enter integers only! Please try again...')
+        logger.exception(e)
     except Exception as e:
         print('Oops! Something went wrong! Please try again...')
         logger.exception(e)

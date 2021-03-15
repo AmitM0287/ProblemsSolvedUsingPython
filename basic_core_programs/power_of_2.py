@@ -13,8 +13,10 @@ logger = logging_config.get_logger()
 
 def power_of(number_):
     """
-    power_of(number_): This function calculate the power of 2 of a number. It's adds all the values
-    in a list. It returns a list of power of 2.
+    This function calculate the power of 2 of a number. It's adds all the values
+    in a list.
+    :param number_: It's accept a number_ as a parameter.
+    :return: It's return a list of power of 2.
     """
     power_value = 0
     list_of_power_of_2 = []
@@ -34,10 +36,12 @@ if __name__ == '__main__':
                 print(values, ' ', end='')
         else:
             print('Please enter a integer number within (0 <= number < 31) this range!')
-    except ValueError:
+    except ValueError as e:
         print('Enter integer numbers only! Please try again...')
-    except IndexError:
+        logger.exception(e)
+    except IndexError as e:
         print('Enter value as command line arguments only! Please try again...')
+        logger.exception(e)
     except Exception as e:
         print('Oops! Something went wrong! Please try again...')
         logger.exception(e)
