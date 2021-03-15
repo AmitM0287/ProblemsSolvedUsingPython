@@ -12,8 +12,9 @@ logger = logging_config.get_logger()
 
 def harmonic_value_of(number_):
     """
-    harmonic_value_of(number_): This function calculate the n-th harmonic value.
-    It returns the n-th harmonic value of that integer.
+    This function calculate the n-th harmonic value.
+    :param number_: It's accept a number_ as a parameter.
+    :return: It's return n-th harmonic value of that number_.
     """
     harmonic_value_ = 0
     for number_ in range(1, number_+1):
@@ -29,8 +30,9 @@ if __name__ == '__main__':
             print('The Harmonic value of ', number, ' is : ', harmonic_value)
         else:
             print('Enter positive integers only! Please try again...')
-    except ValueError:
+    except ValueError as e:
         print('Enter integers only! Please try again...')
+        logger.exception(e)
     except Exception as e:
         print('Oops! Something went wrong! Please try again...')
         logger.exception(e)
