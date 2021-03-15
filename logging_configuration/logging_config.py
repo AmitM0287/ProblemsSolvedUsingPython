@@ -6,8 +6,8 @@ import logging
 
 def get_logger():
     """
-    get_logger(): This function sets the logging configuration. It returns a logger.
-    Using this logger we can put the exceptions or etc. in the log file.
+    This function sets the logging configuration.
+    :return: It returns a logger. Using this logger we can put the exceptions in the log file.
     """
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.ERROR)
