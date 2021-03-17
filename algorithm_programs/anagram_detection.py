@@ -1,6 +1,7 @@
 """
 Q. An Anagram Detection Example
-    Desc -> One string is an anagram of another if the second is simply a rearrangement of the first. For example, 'heart' and 'earth' are anagrams...
+    Desc -> One string is an anagram of another if the second is simply a rearrangement of the first.
+    For example, 'heart' and 'earth' are anagrams...
     I/P -> Take 2 Strings as Input such abcd and dcba and Check for Anagrams
     O/P -> The Two Strings are Anagram or not....
 """
@@ -16,14 +17,13 @@ def check_anagram(string1, string2):
     :param string2: It's accept string2 as a parameter.
     :return: It's return True if strings are anagram each other otherwise False.
     """
-    string1 = sorted(string1)
-    string2 = sorted(string2)
     if len(string1) != len(string2):
         return False
-    elif string1 == string2:
+    string1 = sorted(string1)
+    string2 = sorted(string2)
+    if string1 == string2:
         return True
-    else:
-        return False
+    return False
 
 
 if __name__ == '__main__':
