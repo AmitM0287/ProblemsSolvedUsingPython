@@ -1,0 +1,5 @@
+03/15/2021 12:48:16 PM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\algorithm_programs\bubble_sort.py", line 26, in <module>
+    array[index] = int(input('Enter ', index, ' element: '))
+TypeError: input expected at most 1 argument, got 3
