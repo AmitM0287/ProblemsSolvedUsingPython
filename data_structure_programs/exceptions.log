@@ -1,0 +1,150 @@
+03/19/2021 07:23:45 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 20, in <module>
+    for number in file:
+io.UnsupportedOperation: not readable
+03/19/2021 07:24:42 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 20, in <module>
+    for number in file.write():
+TypeError: TextIOWrapper.write() takes exactly one argument (0 given)
+03/19/2021 08:16:52 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 23, in <module>
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 08:17:56 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 22, in <module>
+    for number in int(file.read().split(' ')):
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+03/19/2021 11:26:52 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 36, in <module>
+    file.write(number, ' ')
+TypeError: TextIOWrapper.write() takes exactly one argument (2 given)
+03/19/2021 11:27:41 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 22, in <module>
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:28:20 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 22, in <module>
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:31:02 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 36, in <module>
+    file.write(str(number), ' ')
+TypeError: TextIOWrapper.write() takes exactly one argument (2 given)
+03/19/2021 11:31:35 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 22, in <module>
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:42:28 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 43, in <module>
+    list_ = is_found(new_number)
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 19, in is_found
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:44:36 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:/Pycharm Workshop/ProblemsSolvedUsingPython/data_structure_programs/ordered_list.py", line 43, in <module>
+    list_ = is_found(new_number)
+  File "D:/Pycharm Workshop/ProblemsSolvedUsingPython/data_structure_programs/ordered_list.py", line 19, in is_found
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:46:39 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 43, in <module>
+    list_ = is_found(new_number)
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 19, in is_found
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:47:10 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 31, in <module>
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:47:38 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 22, in <module>
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:47:51 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 22, in <module>
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:48:21 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 22, in <module>
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:51:32 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 22, in <module>
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:52:43 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 21, in <module>
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:53:08 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 21, in <module>
+    number = int(number)
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:53:25 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 22, in <module>
+    list_of_numbers.append(int(number))
+ValueError: invalid literal for int() with base 10: ''
+03/19/2021 11:54:42 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 35, in <module>
+    for number in sorted(list_of_numbers):
+TypeError: '<' not supported between instances of 'int' and 'str'
+03/19/2021 11:55:06 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 35, in <module>
+    for number in sorted(list_of_numbers):
+TypeError: '<' not supported between instances of 'int' and 'str'
+03/19/2021 11:55:18 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 35, in <module>
+    for number in sorted(list_of_numbers):
+TypeError: '<' not supported between instances of 'int' and 'str'
+03/19/2021 11:55:53 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 35, in <module>
+    for number in sorted(list_of_numbers):
+TypeError: '<' not supported between instances of 'int' and 'str'
+03/19/2021 11:56:48 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 34, in <module>
+    for number in sorted(list_of_numbers):
+TypeError: '<' not supported between instances of 'int' and 'str'
+03/19/2021 11:58:15 AM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\ordered_list.py", line 34, in <module>
+    for number in sorted(list_of_numbers):
+TypeError: '<' not supported between instances of 'int' and 'str'
+03/19/2021 01:16:29 PM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\unordered_list.py", line 56, in <module>
+    list_of_words_ = is_found(new_word_)
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\unordered_list.py", line 24, in is_found
+    file = open('words.txt', mode='r')
+FileNotFoundError: [Errno 2] No such file or directory: 'words.txt'
+03/19/2021 01:17:00 PM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\unordered_list.py", line 56, in <module>
+    list_of_words_ = is_found(new_word_)
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\data_structure_programs\unordered_list.py", line 26, in is_found
+    for word in file.read().split(' '):
+io.UnsupportedOperation: not readable
