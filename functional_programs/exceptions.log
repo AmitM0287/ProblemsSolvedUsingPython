@@ -9,3 +9,13 @@ Traceback (most recent call last):
     len_arr = int(input('Enter how many elements you want to enter to get a triplet of sum zero : '))
 ValueError: invalid literal for int() with base 10: 'hjvsfk'
 
+03/26/2021 01:39:57 PM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\functional_programs\sum_of_three_int_adds_to_zero.py", line 53, in <module>
+    len_array = int(input('Enter how many elements you want to enter to get a triplet of sum zero : '))
+ValueError: invalid literal for int() with base 10: 'k'
+03/26/2021 01:40:18 PM : logging_configuration.logging_config : 
+Traceback (most recent call last):
+  File "D:\Pycharm Workshop\ProblemsSolvedUsingPython\functional_programs\sum_of_three_int_adds_to_zero.py", line 53, in <module>
+    len_array = int(input('Enter how many elements you want to enter to get a triplet of sum zero : '))
+ValueError: invalid literal for int() with base 10: 'k'
