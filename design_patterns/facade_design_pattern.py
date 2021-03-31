@@ -5,56 +5,67 @@
     classes independent from interface implementer classes. Both types of classes can be altered structurally
     without affecting each other.
 """
+from abc import ABC, abstractmethod
 
 
-class Sensor(object):
+class Implementor(ABC):
+    @abstractmethod
+    def is_on_state(self):
+        pass
+
+    @abstractmethod
+    def is_off_state(self):
+        pass
+
+
+class Sensor(Implementor):
     def __init__(self):
         pass
 
-    def sensor_on(self):
+    def is_on_state(self):
         print('Sensor is ON')
 
-    def sensor_off(self):
-        print('Sensor OFF')
+    def is_off_state(self):
+        print('Sensor is OFF')
 
 
-class Smoke(object):
+class Smoke(Implementor):
     def __init__(self):
         pass
 
-    def smoke_on(self):
-        print('Smoke ON')
+    def is_on_state(self):
+        print('Smoke is ON')
 
-    def smoke_off(self):
-        print('Smoke OFF')
+    def is_off_state(self):
+        print('Smoke is OFF')
 
 
-class Light(object):
+class Light(Implementor):
     def __init__(self):
         pass
 
-    def light_on(self):
-        print('Light ON')
+    def is_on_state(self):
+        print('Light is ON')
 
-    def light_off(self):
-        print('Light OFF')
+    def is_off_state(self):
+        print('Light is OFF')
 
 
-class Facade(object):
+class Facade:
     def __init__(self):
         self._sensor = Sensor()
         self._smoke = Smoke()
         self._light = Light()
 
     def emergency(self):
-        self._sensor.sensor_on()
-        self._smoke.smoke_on()
-        self._light.light_on()
+        self._sensor.is_on_state()
+        self._smoke.is_on_state()
+        self._light.is_on_state()
 
     def no_emergency(self):
-        self._sensor.sensor_off()
-        self._smoke.smoke_off()
-        self._light.light_off()
+        self._sensor.is_off_state()
+        self._smoke.is_off_state()
+        self._light.is_off_state()
 
 
 if __name__ == '__main__':
