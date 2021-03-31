@@ -34,6 +34,7 @@ class MetaClass(type):
         if cls not in cls._instances:
             cls._instances[cls] = super(MetaClass, cls).__call__(*args, **kwargs)
             return cls._instances[cls]
+        return cls._instances[cls]
 
 
 class Singleton(metaclass=MetaClass):
